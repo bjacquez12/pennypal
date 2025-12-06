@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PennyPal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Login Container -->
+  <div class="login-container" id="loginContainer">
+    <h2>Login to PennyPal</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <div class="signup-container" id="signupContainer">
+  <h2>Sign Up</h2>
+  <form id="signupForm">
+    <input type="text" id="newUsername" placeholder="Choose a username" required />
+    <input type="password" id="newPassword" placeholder="Choose a password" required />
+    <button type="submit">Create Account</button>
+  </form>
+</div>
+
+  <!-- Main App Container (hidden until login) -->
+  <div class="app-container" id="appContainer" style="display: none;">
+    <button id="logoutBtn">Logout</button>
+    <div class="input-container">
+      <div class="header">
+        <h1>🪙PennyPal</h1>
+      </div>
+
+      <div id="balance">Balance: $ 0.00</div>
+
+      <form id="transactionForm">
+        <input type="text" id="description" placeholder="Transaction Description" required />
+        <input type="number" id="amount" placeholder="Amount" step="0.01" required />
+        <select id="type" required>
+          <option value="income">💸 Income</option>
+          <option value="expense">💳 Expense</option>
+        </select>
+        <button type="submit">Add Transaction</button>
+      </form>
+    </div>
+
+    <div class="transactions-container">
+      <h2>Transactions</h2>
+      <div id="transactionList">
+      </div>
+    </div>
+  </div>
+  
+<script src="main.js" defer></script>
+</body>
+</html>
